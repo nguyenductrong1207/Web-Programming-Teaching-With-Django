@@ -12,48 +12,7 @@
 
 {% block content %}
   <header>
-      <div class="container">
-          <div class="row">
-              <div class="col-md-2">
-                  <a class="logo-img" href=""><img class="img-fluid logo" src="{% static 'images/vie-deli/logo.png' %}" alt="logo"
-                          loading="lazy"></a>
-              </div>
-              <div class="col-md-8 d-flex align-items-center">
-                  <button class="nav-bar-icon">
-                      <i class="fa-solid fa-bars"></i>
-                  </button>
-                  <ul class="main-menu">
-                      <button class="close-btn"><i class="fa-solid fa-x"></i></button>
-                      <li><a href="#">Giới thiệu</a></li>
-                      <li><a href="#">Sản phẩm</a></li>
-                      <li><a href="#">Điểm phục vụ</a></li>
-                      <li><a href="#">Khuyến mãi</a></li>
-                      <li><a href="{% url 'blog' %}">Tin tức</a></li>
-                      <li><a href="{% url 'profile' %}">Trang cá nhân</a></li>
-                  </ul>
-                  <button class="search-icon">
-                      <img class="img-fluid" src="{% static 'images/vie-deli/search-icon.png' %}" alt="Tra cứu" loading="lazy">
-                  </button>
-                  <div class="search-mobile">
-                      <input type="search" name="search" id="search" placeholder="Searching...">
-                      <i class="fa-solid fa-x"></i>
-                  </div>
-                  <div class="overlay">
-                      <div class="search-overlay">
-                          <input type="search" name="search" id="search" placeholder="Searching...">
-                          <button type="button" class="search-btn">Search</button>
-                          <button class="close-search-btn"><i class="fa-solid fa-x"></i></button>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-md-2 contact d-flex align-items-center">
-                  <div class="hotline">
-                      <img class="img-fluid" src="{% static 'images/vie-deli/phone-icon.png' %}" alt="Điện thoại" loading="lazy">
-                      <p>HOTLINE 24/7<br><span class="tel">090.154.8866</span></p>
-                  </div>
-              </div>
-          </div>
-      </div>
+
 
       <div class="slider">
           <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

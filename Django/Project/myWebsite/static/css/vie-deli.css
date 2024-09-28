@@ -9,6 +9,58 @@ h3 {
     color: red;
 }
 
+/* Trang Post */
+
+.post-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.post-title {
+    font-size: 36px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.post-body {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #34495e;
+    margin-bottom: 30px;
+}
+
+.post-body p {
+    margin-bottom: 20px;
+}
+
+.post-footer {
+    text-align: right;
+}
+
+.back-to-blog {
+    font-weight: bold;
+    font-size: 16px;
+    color: #3498db;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.3s ease-in-out;
+}
+
+.back-to-blog:hover {
+    border-bottom: 1px solid #3498db;
+}
+
+
+.nhat {
+    color: rgb(0, 0, 0);
+}
+
 /* Tổng quát */
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -106,65 +158,6 @@ p {
     .container {
         width: 95%;
     }
-}
-
-/* Trang Post */
-.post-container {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
-}
-
-.post-header {
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 15px;
-    margin-bottom: 20px;
-}
-
-.post-title {
-    font-size: 36px;
-    color: #2c3e50;
-    margin-bottom: 10px;
-}
-
-.post-meta {
-    font-size: 14px;
-    color: #7f8c8d;
-}
-
-.post-body {
-    font-size: 18px;
-    line-height: 1.8;
-    color: #34495e;
-    margin-bottom: 30px;
-}
-
-.post-body p {
-    margin-bottom: 20px;
-}
-
-.post-footer {
-    text-align: right;
-}
-
-.back-to-blog {
-    font-weight: bold;
-    font-size: 16px;
-    color: #3498db;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-bottom 0.3s ease-in-out;
-}
-
-.back-to-blog:hover {
-    border-bottom: 1px solid #3498db;
-}
-
-
-.nhat {
-    color: rgb(0, 0, 0);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Roboto&display=swap');

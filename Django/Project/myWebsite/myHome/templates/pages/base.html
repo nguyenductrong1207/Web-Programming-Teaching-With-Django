@@ -28,8 +28,24 @@
   </head>
 
   <body>
-
     
+    <div class="container">
+      <div class="row">
+          <div class="col-md-6">
+              <a class="logo-img" href=""><img class="img-fluid ndtLogo" src="{% static 'images/ndt.jpg' %}" alt="logo"
+                      loading="lazy"></a>
+          </div>
+          <div class="col-md-6 d-flex align-items-center">
+              <ul class="main-menu">
+                  <button class="close-btn"><i class="fa-solid fa-x"></i></button>
+                  <li><a href="{% url 'post_new' %}">New Post</a></li>
+                  <li><a href="{% url 'blog' %}">Tin tức</a></li>
+                  <li><a href="{% url 'profile' %}">Trang cá nhân</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
     {% block content %}
 
     {% endblock %}
