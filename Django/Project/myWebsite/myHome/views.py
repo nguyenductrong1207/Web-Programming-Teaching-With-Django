@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, 'pages/vie-deli.html')
+    return render(request, 'pages/home.html')
 
 def profile(request):
     return render(request, 'pages/profile.html')
@@ -11,7 +11,7 @@ def profile(request):
 def error(request, exception):
     return render(request, 'pages/error.html', {'message': exception})
 
-
+# Students Websites
 def vie_deli(request):
     return render(request, 'pages/vie-deli.html')
 
