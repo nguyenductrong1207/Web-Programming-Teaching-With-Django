@@ -1,26 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+{% extends 'pages/base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% block title %}
+  TU NHO RESTAURANT
+{% endblock %}
 
-    <!-- Font Awesome Version 4.7.0 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
-        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+{% load static %}
 
-    <link rel="stylesheet" href="style.css">
-    <title>Tư Nhớ Restaurant</title>
-</head>
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% endblock %}
 
-<body>
+{% block content %}
     <div class="hover-content">
         <header>
             <div class="home-page">
@@ -57,13 +48,13 @@
 
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="src/carousel-2.jpg" class="d-block w-100" alt="slide1">
+                            <img src="{% static 'images/tu-nho/carousel-2.jpg' %}" class="d-block w-100" alt="slide1">
                         </div>
                         <div class="carousel-item">
-                            <img src="src/carousel-1.jpg" class="d-block w-100" alt="slide2">
+                            <img src="{% static 'images/tu-nho/carousel-1.jpg' %}" class="d-block w-100" alt="slide2">
                         </div>
                         <div class="carousel-item">
-                            <img src="src/carousel-3.jpg" class="w-100" alt="slide3">
+                            <img src="{% static 'images/tu-nho/carousel-3.jpg' %}" class="w-100" alt="slide3">
                         </div>
                     </div>
 
@@ -265,15 +256,15 @@
                             <div class="table-reason-choose">
                                 <table class="table-reason-choose-img">
                                     <tr>
-                                        <td><img src="src/feature-1.1.jpg" class="table-1" alt="" width="200px"
+                                        <td><img src="{% static 'images/tu-nho/feature-1.1.jpg' %}" class="table-1" alt="" width="200px"
                                                 height="200px"></td>
-                                        <td><img src="src/feature-2.2.jpg" class="table-2" alt="" width="200px"
+                                        <td><img src="{% static 'images/tu-nho/feature-2.2.jpg' %}" class="table-2" alt="" width="200px"
                                                 height="200px"></td>
                                     </tr>
                                     <tr>
-                                        <td><img src="src/feature-3.3.jpg" class="table-3" alt="" width="200px"
+                                        <td><img src="{% static 'images/tu-nho/feature-3.3.jpg' %}" class="table-3" alt="" width="200px"
                                                 height="200px"></td>
-                                        <td><img src="src/feature-4.4.jpg" class="table-4" alt="" width="200px"
+                                        <td><img src="{% static 'images/tu-nho/feature-4.4.jpg' %}" class="table-4" alt="" width="200px"
                                                 height="200px"></td>
                                     </tr>
                                 </table>
@@ -296,7 +287,7 @@
                             <ul class="items">
                                 <li>
                                     <div class="item-details">
-                                        <img src="src/đầu_bếp_hàng_đầu.png" class="reason-choose-img" alt="">
+                                        <img src="{% static 'images/tu-nho/đầu_bếp_hàng_đầu.png' %}" class="reason-choose-img" alt="">
                                         <h4>Đầu bếp hàng đầu</h4>
                                         <p>Chúng tôi tự hào với đội ngũ đầu bếp hơn 20 năm kinh nghiệm sẽ làm hài lòng
                                             những
@@ -307,7 +298,7 @@
 
                                 <li>
                                     <div class="item-details">
-                                        <img src="src/sản_phẩm_chất_lượng_cao.png" class="reason-choose-img" alt="">
+                                        <img src="{% static 'images/tu-nho/sản_phẩm_chất_lượng_cao.png' %}" class="reason-choose-img" alt="">
                                         <h4>Sản phẩm chất lượng cao</h4>
                                         <p>Các món ăn được chuẩn bị với công thức đặc biệt giúp đảm bảo không chỉ ngon
                                             miệng
@@ -319,7 +310,7 @@
 
                                 <li>
                                     <div class="item-details">
-                                        <img src="src/giao_hàng_nhanh_chóng.png" class="reason-choose-img" alt="">
+                                        <img src="{% static 'images/tu-nho/giao_hàng_nhanh_chóng.png' %}" class="reason-choose-img" alt="">
                                         <h4>Giao hàng nhanh chóng</h4>
                                         <p>Hỗ trợ dịch vụ giao hàng, nhanh chóng, miễn phí với các khách hàng muốn đặt
                                             tiệc
@@ -337,7 +328,7 @@
                             <ul class="items">
                                 <li>
                                     <div class="item-details">
-                                        <img src="src/nguyên_liệu_tự_nhiên.png" class="reason-choose-img" alt="">
+                                        <img src="{% static 'images/tu-nho/nguyên_liệu_tự_nhiên.png' %}" class="reason-choose-img" alt="">
                                         <h4>Nguyên liệu tự nhiên</h4>
                                         <p>Chúng tôi không sử dụng hóa chất hay các phụ phẩm gây hại trong quá trình chế
                                             biến
@@ -348,7 +339,7 @@
 
                                 <li>
                                     <div class="item-details">
-                                        <img src="src/nguyên_liệu_tươi_sống.png" class="reason-choose-img" alt="">
+                                        <img src="{% static 'images/tu-nho/nguyên_liệu_tươi_sống.png' %}" class="reason-choose-img" alt="">
                                         <h4>Nguyên liệu tươi sống</h4>
                                         <p>Tư Nhớ restaurant chỉ nhập hải sản, thịt tươi sống có xuất xứ rõ ràng đảm bảo
                                             vệ
@@ -360,7 +351,7 @@
 
                                 <li>
                                     <div class="item-details">
-                                        <img src="src/rau_củ_an_toàn.png" class="reason-choose-img" alt="">
+                                        <img src="{% static 'images/tu-nho/rau_củ_an_toàn.png' %}" class="reason-choose-img" alt="">
                                         <h4>Rau củ an toàn</h4>
                                         <p>Sử dụng rau củ an toàn, không qua các hóa chất bảo vệ thực vật, thuốc trừ sâu
                                         </p>
@@ -394,7 +385,7 @@
                             <ul class="thuc-don-details">
                                 <li>
                                     <div class="media">
-                                        <img src="src/menu-1.jpg" class="align-self-center mr-3" alt="" width="80px">
+                                        <img src="{% static 'images/tu-nho/menu-1.jpg' %}" class="align-self-center mr-3" alt="" width="80px">
                                         <div class="media-body">
                                             <h5 class="mt-0">Hàu Sữa Nướng Mỡ Hành <span
                                                     class="hr-dash">----------------------------------------
@@ -408,7 +399,7 @@
 
                                 <li>
                                     <div class="media">
-                                        <img src="src/menu-2.jpg" class="align-self-center mr-3" alt="" width="80px">
+                                        <img src="{% static 'images/tu-nho/menu-2.jpg' %}" class="align-self-center mr-3" alt="" width="80px">
                                         <div class="media-body">
                                             <h5 class="mt-0">Cua Rang Me <span
                                                     class="hr-dash">--------------------------------------------------------------------
@@ -422,7 +413,7 @@
 
                                 <li>
                                     <div class="media">
-                                        <img src="src/menu-3.jpg" class="align-self-center mr-3" alt="" width="80px">
+                                        <img src="{% static 'images/tu-nho/menu-3.jpg' %}" class="align-self-center mr-3" alt="" width="80px">
                                         <div class="media-body">
                                             <h5 class="mt-0">Ốc Móng Tay Hấp <span
                                                     class="hr-dash">---------------------------------------------------------
@@ -434,7 +425,7 @@
 
                                 <li>
                                     <div class="media">
-                                        <img src="src/menu-4.jpg" class="align-self-center mr-3" alt="" width="80px">
+                                        <img src="{% static 'images/tu-nho/menu-4.jpg' %}" class="align-self-center mr-3" alt="" width="80px">
                                         <div class="media-body">
                                             <h5 class="mt-0">Tôm Hùm Bỏ Lò <span
                                                     class="hr-dash">-------------------------------------------------------------
@@ -446,7 +437,7 @@
 
                                 <li>
                                     <div class="media">
-                                        <img src="src/menu-5.jpg" class="align-self-center mr-3" alt="" width="80px">
+                                        <img src="{% static 'images/tu-nho/menu-5.jpg' %}" class="align-self-center mr-3" alt="" width="80px">
                                         <div class="media-body">
                                             <h5 class="mt-0">Tôm Sú Chiến Bơ <span
                                                     class="hr-dash">-----------------------------------------------------------
@@ -461,7 +452,7 @@
 
                         <div class="col-md-6">
                             <div class="thuc-don-picture">
-                                <img src="src/Hải sản.jpg" alt="">
+                                <img src="{% static 'images/tu-nho/Hải sản.jpg' %}" alt="">
                             </div>
                         </div>
                     </div>
@@ -690,20 +681,4 @@
         <!-- <button class="go-top"><i class="fas fa-chevron-up"></i></button> -->
     </div>
 
-
-    <!-- Optional JavaScript -->
-    <script src="script.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
-</body>
-
-</html>
+    {% endblock %}

@@ -17,7 +17,7 @@
                 <a class="nhat" href="/blog/{{post.id}}">{{ post.title }} </a>
             </h2>
             <p class="post-meta">
-                Posted on {{ post.date | date:"d-m-Y" }} by {{ post.author }}
+                Posted on {{ post.date | date:"d-m-Y" }}
             </p>
             <div class="post-excerpt">
                 {{ post.content|truncatewords:30 }} 
