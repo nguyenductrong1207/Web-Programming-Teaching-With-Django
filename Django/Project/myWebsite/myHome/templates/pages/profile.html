@@ -1,0 +1,54 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}
+  Profile
+{% endblock %}
+
+{% load static %}
+
+{% block extra_css %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 text-center">
+        <img src="{% static 'images/demo.jpg' %}" alt="" class="img-thumbnail" />
+        <h2 class="test">Minh Nhat</h2>
+        <p>Web Developer</p>
+        <button type="button" class="btn btn-primary mt-3">Download CV</button>
+      </div>
+
+      <div class="col-md-9">
+        <div class="row">
+          <div class="col-md-6">
+            <h1>About Me</h1>
+            <p>George is a versatile web designer due to his extensive history in graphic and web design. His dedication to continuously learning about new web design trends and concepts has made him a valuable member of the team. With eight years of experience and a master's in web design, his expertise can help customers modernize with websites and appeal to expanding customer populations.</p>
+
+            <h2 class="mt-3">What I Do</h2>
+
+            <h3 class="mt-2">Ecommerce</h3>
+            <p>Ecommerce or "electronic commerce" is the trading of goods and services online. The internet allows individuals and businesses to buy and sell an increasing amount of physical goods, digital goods, and services electronically.</p>
+
+            <h3 class="mt-2">Web Design</h3>
+            <p>Web design refers to the design of websites. It usually refers to the user experience aspects of website development rather than software development.</p>
+          </div>
+          <div class="col-md-6">
+            <p>Age: 32</p>
+            <p>Residence: Viet Nam</p>
+            <p>Address: Binh Duong</p>
+            <p>Email: minhnhat@gmail.com</p>
+            <p>Phone: 0988642123</p>
+
+            <h3 class="mt-5">Copywriting</h3>
+            <p>Ecommerce or "electronic commerce" is the trading of goods and services online. The internet allows individuals and businesses to buy and sell an increasing amount of physical goods, digital goods, and services electronically.</p>
+
+            <h3 class="mt-2">Management</h3>
+            <p>Web design refers to the design of websites. It usually refers to the user experience aspects of website development rather than software development.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

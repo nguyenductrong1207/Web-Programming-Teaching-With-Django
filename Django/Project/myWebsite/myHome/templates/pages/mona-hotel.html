@@ -1,0 +1,627 @@
+{% extends 'pages/base.html' %}
+
+{% block title %}
+Khách Sạn Mona
+{% endblock %}
+
+{% load static %}
+
+{% block extra_css %}
+  {% comment %} <link rel="stylesheet" href="{% static 'css/style.css' %}" /> {% endcomment %}
+{% endblock %}
+
+{% block content %}
+    <header>
+        <div class="header" id="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <p class="header1">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            542 Chánh Phú Hòa, Bến Cát, Bình Dương
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                        <p class="header2">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            08.38 409 092
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="header3">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav" id="nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <a href="#nav"><img src="images/logo.jpg" alt=""></a>
+                    </div>
+                    <div class="col-md-9">
+                        <ul>
+                            <li><a href="#header">Trang Chủ</a></li>
+                            <li><a href="#welcome">Giới Thiệu</a></li>
+                            <li><a href="#service">Dịch Vụ <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                            <li><a href="#room">Loại Phòng <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
+                            <li><a href="#new">Tin Tức</a></li>
+                            <li><a href="#contact">Liên Hệ</a></li>
+                            <li>
+                                <input type="text" placeholder="Tìm Kiếm..">
+                                <i class="fa fa-search" aria-hidden="true" style="color: #808080"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="navMobile" class="navMobile">
+            <a href="#" class="closebtn" onclick="closeNav()">×</a>
+            <a href="#openbtn">Trang Chủ</a>
+            <a href="#welcome">Giới Thiệu</a>
+            <a href="#service">Dịch Vụ</a>
+            <a href="#room">Loại Phòng</a>
+            <a href="#new">Tin Tức</a>
+            <a href="#contact">Liên Hệ</a>
+        </div>
+        <button class="openbtn" id="openbtn" onclick="openNav()">
+            <i class="fa fa-align-justify fa-lg"></i> DANH MỤC SẢN
+            PHẨM</button>
+    </nav>
+
+    <!-- Main -->
+    <main>
+        <!-- Sliders -->
+        <div class="slider">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <div class="welcome-slider">
+                            <h1>Welcome to Mona Hotel</h1>
+                            <p>Khách sạn Mona là khách sạn đạt tiêu chuẩn quốc tế 5 sao hàng đầu tọa lạc ngay tại trung
+                                tâm kinh
+                                doanh,
+                                mua sắm, thương mại, giải trí sầm uất của Bình Dương cách trung tâm khoảng 5 km đường
+                                bộ. Nơi thu
+                                hút
+                                rất nhiều du khách cả trong nước và quốc tế đến tham quan hằng năm.</p>
+                        </div>
+                        <div class="welcome-slider-mobile">
+                            <h1>Welcome to Mona Hotel</h1>
+                        </div>
+                        <img src="images/slide-1.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="welcome-slider">
+                            <h1>Welcome to Mona Hotel</h1>
+                            <p>Khách sạn Mona là khách sạn đạt tiêu chuẩn quốc tế 5 sao hàng đầu tọa lạc ngay tại trung
+                                tâm kinh
+                                doanh,
+                                mua sắm, thương mại, giải trí sầm uất của Bình Dương cách trung tâm khoảng 5 km đường
+                                bộ. Nơi thu
+                                hút
+                                rất nhiều du khách cả trong nước và quốc tế đến tham quan hằng năm.</p>
+                        </div>
+                        <div class="welcome-slider-mobile">
+                            <h1>Welcome to Mona Hotel</h1>
+                        </div>
+                        <img src="images/slide-2.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="welcome-slider">
+                            <h1>Welcome to Mona Hotel</h1>
+                            <p>Khách sạn Mona là khách sạn đạt tiêu chuẩn quốc tế 5 sao hàng đầu tọa lạc ngay tại trung
+                                tâm kinh
+                                doanh,
+                                mua sắm, thương mại, giải trí sầm uất của Bình Dương cách trung tâm khoảng 5 km đường
+                                bộ. Nơi thu
+                                hút
+                                rất nhiều du khách cả trong nước và quốc tế đến tham quan hằng năm.</p>
+                        </div>
+                        <div class="welcome-slider-mobile">
+                            <h1>Welcome to Mona Hotel</h1>
+                        </div>
+                        <img src="images/slide-3.jpg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <div class="welcome-slider">
+                            <h1>Welcome to Mona Hotel</h1>
+                            <p>Khách sạn Mona là khách sạn đạt tiêu chuẩn quốc tế 5 sao hàng đầu tọa lạc ngay tại trung
+                                tâm kinh
+                                doanh,
+                                mua sắm, thương mại, giải trí sầm uất của Bình Dương cách trung tâm khoảng 5 km đường
+                                bộ. Nơi thu
+                                hút
+                                rất nhiều du khách cả trong nước và quốc tế đến tham quan hằng năm.</p>
+                        </div>
+                        <div class="welcome-slider-mobile">
+                            <h1>Welcome to Mona Hotel</h1>
+                        </div>
+                        <img src="images/slide-4.jpg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- Welcome -->
+        <div class="welcome" id="welcome">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="welcome-caption">
+                            <h3>Chào mừng đến với</h3>
+                            <h1>Khách sạn MONA</h1>
+                            <p>Khách sạn Mona là khách sạn đạt tiêu chuẩn quốc tế 5 sao hàng đầu tọa lạc ngay tại trung
+                                tâm
+                                kinh doanh,
+                                mua sắm, thương mại, giải trí sầm uất của thành phố Hồ Chí Minh và chỉ cách Sân bay quốc
+                                tế
+                                Tân Sơn Nhất
+                                khoảng 8 km đường bộ.</p>
+                            <button>Tìm hiểu thêm</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="images/introduction.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services -->
+        <div class="service" id="service">
+            <div class="container">
+                <div class="row">
+                    <div class="service-caption">
+                        <h1>DỊCH VỤ</h1>
+                        <p>Với sự phục vụ chuyên nghiệp, khách sạn MONA luôn mang đến những trải nghiệm tuyệt vời mang
+                            đến sự hài lòng về chất lượng dịch vụ cao cấp nhất trong cả nước.
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-item">
+                            <img src="images/swimming-service.jpg" alt="">
+                            <div class="service-item-caption">
+                                <h3>Hồ bơi</h3>
+                                <p>Đến với Mona Hotel, du khách sẽ được trải nghiệm dịch vụ hồ bơi sang trọng bậc nhất
+                                    tại Bình Dương</p><br>
+                            </div>
+                            <div class="service-btn">
+                                <button>Đặt Ngay</button>
+                                <button>Chi Tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-item">
+                            <img src="images/restroom-service.jpg" alt="">
+                            <div class="service-item-caption">
+                                <h3>Phòng nghỉ</h3>
+                                <p>Đến với Mona Mount Resort, du khách sẽ được trải nghiệm khí hậu bốn mùa trong một
+                                    ngày, chu du trên những tuyến cáp treo, đắm chìm trong cảnh quan thiên nhiên của
+                                    Bình Dương</p>
+                            </div>
+                            <div class="service-btn">
+                                <button>Đặt Ngay</button>
+                                <button>Chi Tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="service-item">
+                            <img src="images/restaurant-service.jpg" alt="">
+                            <div class="service-item-caption">
+                                <h3>Nhà hàng</h3>
+                                <p>Đến với Mona Hotel, du khách sẽ được trải nghiệm dịch vụ nhà hàng sang trọng với các
+                                    món ăn đặc sản, thơm ngon và nổi tiếng của Bình Dương</p>
+                            </div>
+                            <div class="service-btn">
+                                <button>Đặt Ngay</button>
+                                <button>Chi Tiết</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Six choices -->
+        <div class="choice">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="choice-item">
+                            <div class="col-md-3 no-gutter3">
+                                <div class="choice-icon">
+                                    <i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9 no-gutter9">
+                                <div class="choice-caption">
+                                    <h4>Đặt phòng đơn giản</h4>
+                                    <p>Thủ tục nhanh gọn, tiện lợi, dễ dàng và nhanh chóng</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice-item">
+                            <div class="col-md-3 no-gutter3">
+                                <div class="choice-icon">
+                                    <i class="fa fa-cutlery fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9 no-gutter9">
+                                <div class="choice-caption">
+                                    <h4>Ẩm thực đa dạng</h4>
+                                    <p>Phục vụ các món ngon từ khắp nơi trên đất nước.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="choice-item">
+                            <div class="col-md-3 no-gutter3">
+                                <div class="choice-icon">
+                                    <i class="fa fa-key fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9 no-gutter9">
+                                <div class="choice-caption">
+                                    <h4>Không gian yên tĩnh</h4>
+                                    <p>Không gian nhẹ nhàng, yên tĩnh và lãng mạn</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice-item">
+                            <div class="col-md-3 no-gutter3">
+                                <div class="choice-icon">
+                                    <i class="fa fa-bell fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9 no-gutter9">
+                                <div class="choice-caption">
+                                    <h4>Phục vụ 24/7</h4>
+                                    <p>Tận tình phục vụ quý khách tất cả các khung giờ trong ngày</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="choice-item">
+                            <div class="col-md-3 no-gutter3">
+                                <div class="choice-icon">
+                                    <i class="fa fa-plane fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9 no-gutter9">
+                                <div class="choice-caption">
+                                    <h4>Đưa đón tại sân bay</h4>
+                                    <p>Đội ngũ nhân viên nhiệt tình và chu đáo đưa đón tại sân bay</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="choice-item">
+                            <div class="col-md-3 no-gutter3">
+                                <div class="choice-icon">
+                                    <i class="fa fa-bed fa-3x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="col-md-9 no-gutter9">
+                                <div class="choice-caption">
+                                    <h4>Phòng nghỉ hiện đại</h4>
+                                    <p>Cơ sở vật chất hiện đại theo tiêu chuẩn của Châu Âu</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Room -->
+        <div class="room" id="room">
+            <div class="container">
+                <div class="row">
+                    <div class="room-caption">
+                        <h1>CÁC LOẠI PHÒNG</h1>
+                        <p>Với sự lựa chọn phòng đa dạng, đáp ứng nhu cầu của nhiều đối tượng khác nhau, khách sạn MONA
+                            luôn mang đến sự hài lòng cho quý khách đến từ khắp nơi trên đất nước.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="room-item">
+                            <div class="room-item-1">
+                                <img src="images/standard-room.jpg" alt="">
+                            </div>
+                            <div class="room-item-caption">
+                                <h3>Standard Room</h3>
+                                <p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    Số khách: <span>2 người</span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    Diện tích: <span>20m<sup>2</sup></span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    Số giường: <span>1 giường đôi</span>
+                                </p>
+                            </div>
+                            <div class="room-item-button">
+                                <button>Giá: $30 / đêm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="room-item">
+                            <img src="images/double-room.jpg" alt="">
+                            <div class="room-item-caption">
+                                <h3>Double Room</h3>
+                                <p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    Số khách: <span>4 người</span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    Diện tích: <span>30m<sup>2</sup></span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    Số giường: <span>2 giường đôi</span>
+                                </p>
+                            </div>
+                            <div class="room-item-button">
+                                <button>Giá: $60 / đêm</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="room-item">
+                            <img src="images/luxury-room.jpg" alt="">
+                            <div class="room-item-caption">
+                                <h3>Luxury Room</h3>
+                                <p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    Số khách: <span>2 người</span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    Diện tích: <span>50m<sup>2</sup></span>
+                                </p>
+                                <p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                    Số giường: <span>1 giường đôi cỡ King</span>
+                                </p>
+                            </div>
+                            <div class="room-item-button">
+                                <button>Giá: $120 / đêm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Booking Contact -->
+        <div class="contact" id="contact">
+            <div class="contact-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <form id="contactForm">
+                                <h1>LIÊN HỆ ĐẶT PHÒNG</h1>
+                                <div class="contact-block">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div>
+                                                <label for="name">Họ tên</label>
+                                                <input type="text" class="form-control" id="name"
+                                                    placeholder="Full name">
+                                                <span id="nameError" class="error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="dayCome">Ngày đến</label>
+                                                <input type="date" class="form-control" id="dayCome">
+                                                <span id="dayComeError" class="error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="quantity">Số người</label>
+                                                <input type="number" class="form-control" id="quantity"
+                                                    placeholder="---">
+                                                <span id="quantityError" class="error"></span>
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div>
+                                                <label for="phone">Số điện thoại</label>
+                                                <input type="text" class="form-control" id="phone"
+                                                    placeholder="Phone number">
+                                                <span id="phoneError" class="error"></span>
+                                            </div>
+
+                                            <div>
+                                                <label for="dayOut">Ngày đi</label>
+                                                <input type="date" class="form-control" id="dayOut">
+                                                <span id="dayOutError" class="error"></span>
+                                            </div>
+
+
+                                            <div>
+                                                <label for="chooseRoom">Chọn phòng</label>
+                                                <select id="chooseRoom">
+                                                    <option value="1" selected="">Standard Room</option>
+                                                    <option value="2">Double Room</option>
+                                                    <option value="3">Luxury Room</option>
+                                                </select>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="contact-button"><button type="submit">Gửi</button></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- News -->
+        <div class="new" id="new">
+            <h1>TIN TỨC</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="new-big-item">
+                            <img src="images/news-5.png" alt="">
+                            <h5>Khu nghỉ dưỡng MONA tại Bình Dương</h5>
+                            <div class="new-border-highlight"></div>
+                            <p>Được thiết kế bởi top 5 kiến trúc sư lừng danh thế giới Bill Bensley,được kết tinh giữa
+                                những giá trị thẩm mỹ, văn hóa đặc trưng của người Việt và sự sang trọng...</p>
+                            <button>CHI TIẾT</button>
+                        </div>
+                        <div class="new-small-item">
+                            <img src="images/news-2.jpg" alt="">
+                            <div class="new-small-item-caption">
+                                <p>Khu nghỉ dưỡng cao cấp Phú Quốc</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="new-small-item">
+                            <img src="images/news-3.jpg" alt="">
+                            <div class="new-small-item-caption">
+                                <p>Khu nghỉ dưỡng cao cấp Cà Mau</p>
+                            </div>
+                        </div>
+                        <div class="new-big-item">
+                            <img src="images/news-6.jpg" alt="">
+                            <h5>Đi tìm “gốc gác” của các resort sang chảnh ngày nay</h5>
+                            <div class="new-border-highlight"></div>
+                            <p>Thực tế, một địa điểm kết hợp giữa nghỉ dưỡng và giải trí không phải loại hình dịch vụ
+                                mới xuất hiện gần đây, mà đã tồn tại từ rất nhiều thế kỷ trước...</p>
+                            <button>CHI TIẾT</button>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="new-big-item">
+                            <img src="images/news-4.jpg" alt="">
+                            <h5>5 khu nghỉ dưỡng đẹp, sáng, giá cả hợp lý đáng cho bạn “đầu tư”</h5>
+                            <div class="new-border-highlight"></div>
+                            <p>Nếu như giới trẻ bây giờ thích thú với trào lưu du lịch trải nghiệm, du lịch giá rẻ thì
+                                cũng có một bộ phận cho rằng du lịch chỉ tuyệt nhất khi kết hợp với nghỉ dưỡng...</p>
+                            <button>CHI TIẾT</button>
+                        </div>
+                        <div class="new-small-item">
+                            <img src="images/news-1.jpg" alt="">
+                            <div class="new-small-item-caption">
+                                <p>Khách sạn cần làm gì để marketing hiệu quả?</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-1">
+                            <img src="images/logo.jpg" alt="">
+                            <p>Khách sạn Mona là khách sạn đạt tiêu chuẩn quốc tế 5 sao hàng đầu tọa lạc ngay tại trung
+                                tâm Bình Dương.</p>
+                            <p>
+                                <i class="fa fa-facebook fa-lg" aria-hidden="true"></i>
+                                <i class="fa fa-instagram fa-lg" aria-hidden="true"></i>
+                                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-2">
+                            <h3>Thông tin liên hệ</h3>
+                            <p>
+                                <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                                542 Chánh Phú Hòa, Bến Cát, Bình Dương
+                            </p>
+                            <p>
+                                <i class="fa fa-phone fa-lg" aria-hidden="true"></i>
+                                08.38 409 092
+                            </p>
+                            <p>
+                                <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i>
+                                monahotel@gamil.com
+                            </p>
+                            <p>
+                                <i class="fa fa-credit-card fa-lg" aria-hidden="true"></i>
+                                2812 1124 7790
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-3">
+                            <h3>Giải thưởng</h3>
+                            <p>Khách sạn MONA luôn mang đến những trải nghiệm tuyệt vời, sự hài lòng về chất lượng dịch
+                                vụ
+                                cao cấp nhất trong cả nước.</p>
+                            <img src="images/prize.png" alt="">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-4">
+                            <h3>Đăng ký</h3>
+                            <p>Đăng ký để nhận được thông tin mới nhất từ chúng tôi.</p>
+                            <input type="email" placeholder="Email ..."> <i class="fa fa-paper-plane"
+                                aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- copyright -->
+    <p class="copyright"><i class="fa fa-copyright" aria-hidden="true"></i> Bản quyền thuộc về khách sạn MONA.</p>
+
+    <!-- go top button -->
+    <div class="go-top">
+        <a onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up fa-lg"
+                aria-hidden="true"></i></a>
+    </div>
+
+{% endblock %}
