@@ -1,0 +1,43 @@
+SNLTW with Django
+
+HP 10 Lesson 1
+- base.html
+- blog/urls.py
+- blog/views.py
+- templates/blog/post.html
+- templates/blog/post_new.html
+- templates/blog/post_edit.html
+- templates/blog/post_delete.html
+
+HP 10 Lesson 2
+- myWebsite/urls.py
+- create templates/registration folder
+- templates/registration/login.html
+- settings.py
+- base.html
+- 
+- python manage.py startapp accounts
+- accounts/urls.py
+- accounts/views.py
+- templates/registration/signup.html
+
+
+HP 10 Lesson 3
+
+
+HP 10 Lesson 4
+
+
+HP 10 Lesson 5
+
+
+HP 10 Lesson 6
+
+
+HP 10 Lesson 7
+
+
+HP 10 Lesson 8
+
+
+HP 10 Lesson 9

@@ -19,8 +19,12 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('myHome.urls')),  # This will include the root URL configuration from myHome app
-    path('blog/', include('blog.urls')),  # This will include the root URL configuration from blog app
+    path('', include('myHome.urls')),  # Root URL configuration from myHome app
+    path('blog/', include('blog.urls')),  # Root URL configuration from blog app
+    
+    path('accounts/', include('django.contrib.auth.urls')), # HP 10 L2
+    path('accounts/', include('accounts.urls')), # HP 10 L2
+    
 ]
 
 handler404 = 'myHome.views.error'  # This sets the custom 404 handler

@@ -28,7 +28,7 @@
   </head>
 
   <body>
-    
+    {% comment %} HP 10 L1 {% endcomment %}
     <div class="container">
       <div class="row">
           <div class="col-md-6">
@@ -44,7 +44,20 @@
               </ul>
           </div>
       </div>
-  </div>
+    </div>
+
+    {% comment %} HP 10 L2 {% endcomment %}
+    <div class="container">
+      <div class="row">
+          {% if user.is_authenticated %}
+            <p>Hello, {{user.username }}!</p>
+            <p><a href = "{% url 'logout' %}">Logout</a>  </p>
+          {% else %}
+            <p>You are not logged in.</p>
+            <a href = "{% url 'login' %}">Login</a>  
+          {% endif %}  
+      </div>
+    </div>
 
     {% block content %}
 

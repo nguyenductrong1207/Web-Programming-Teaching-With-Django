@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts.apps.AccountsConfig', # HP 10 L2
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -122,3 +123,7 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Login 
+LOGIN_REDIRECT_URL = 'home' # HP 10 L2
+LOGOUT_REDIRECT_URL = 'home' # HP 10 L2
