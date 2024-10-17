@@ -29,7 +29,7 @@
 
   <body>
     {% comment %} HP 10 L1 {% endcomment %}
-    <div class="container">
+    {% comment %} <div class="container">
       <div class="row">
           <div class="col-md-6">
               <a class="logo-img" href=""><img class="img-fluid ndtLogo" src="{% static 'images/ndt.jpg' %}" alt="logo"
@@ -40,11 +40,11 @@
                   <button class="close-btn"><i class="fa-solid fa-x"></i></button>
                   <li><a href="{% url 'post_new' %}">New Post</a></li>
                   <li><a href="{% url 'blog' %}">Tin tức</a></li>
-                  <li><a href="{% url 'profile' %}">Trang cá nhân</a></li>
+                  <li><a href="{% url 'profile' %}">Trang cá nhân</a></li> 
               </ul>
           </div>
       </div>
-    </div>
+    </div> {% endcomment %}
 
     {% comment %} HP 10 L2 {% endcomment %}
     <div class="container">

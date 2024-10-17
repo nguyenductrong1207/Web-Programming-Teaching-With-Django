@@ -23,14 +23,34 @@ HP 10 Lesson 2
 
 
 HP 10 Lesson 3
+- django-admin startproject myProject
+- python manage.py startapp users
+- python manage.py runserver
 
+- users/models.py
+- myProject/settings.py
+- users/admin.py
+- users/forms.py
+- users/admin.py
+python manage.py makemigrations
+python manage.py migrate 
+python manage.py createsuperuser
 
 HP 10 Lesson 4
-- myProject/settings.py line 
-- myProject/settings.py line 
+- myProject/settings.py  
+- myProject/settings.py  
 
-- templates
+- templates/base.html
+- templates/home.html
+- templates/signup.html
+- templates/registration/login.html
+
 - myProject/urls.py
+
+- create urls.py in users
+- users/views.py
+- users/forms.py
+
 
 
 HP 10 Lesson 5
